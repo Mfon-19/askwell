@@ -1,0 +1,24 @@
+{
+  "name": "AskWell Prompt Enhancer",
+  "description": "MVP: injects an AskWell icon into AI-chatbot text areas and replaces their content with 'confirmed!' when clicked.",
+  "version": "0.0.1",
+  "manifest_version": 3,
+
+  "icons": { "48": "icons/askwell-48.png" },
+
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "js": ["contentScript.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

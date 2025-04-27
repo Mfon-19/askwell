@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "lib": ["dom", "es2020"],
+    "module": "es2020",
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "./",
+    "isolatedModules": false
+  },
+  "paths": {
+    "@/*": ["./*"]
+  },
+  "include": ["*.ts"],
+  "exclude": ["node_modules"]
+}

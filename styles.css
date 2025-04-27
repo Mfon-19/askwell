@@ -1,0 +1,37 @@
+/* Wrap the input so we can absolutely-position the badge relative to it */
+.askwell-wrapper {
+  position: relative;
+  display: inline-block;   
+  width: 100%;            
+}
+
+/* Badge button (top-right) */
+.askwell-badge {
+  --size: 24px;
+  position: absolute;
+  top: 4px;     
+  right: 4px; 
+  width: var(--size);
+  height: var(--size);
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform 120ms ease;
+  z-index: 10;    
+}
+
+.askwell-badge:hover {
+  transform: scale(1.15);
+}
+
+.askwell-badge img,
+.askwell-badge svg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  pointer-events: none;  
+}
